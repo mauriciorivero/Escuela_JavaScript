@@ -1,19 +1,24 @@
-//Reto condicionales 1
+//Reto condicionales 2
 
 var eleccion="piedra";
 
 function ejecutarJuego(eleccion){
     let eleccionCPU = Math.floor(Math.random()*Math.floor(3));
     let palabraCPU = "";
-    if(eleccionCPU==1){
-        palabraCPU="piedra"
-    }else if(eleccionCPU==2){
-        palabraCPU="papel";
-    }else if(eleccionCPU==3){
-        palabraCPU="tijera"
-    }else{
-        palabraCPU="NoDecide";
-    }
+    switch (eleccionCPU){
+        case 1:
+            palabraCPU="piedra";
+            break;
+        case 2:
+            palabraCPU="papel"; 
+            break;
+        case 3:
+            palabraCPU="tijera";
+            break;
+        default: 
+            palabraCPU="NoDecide";   
+    }   
+    
 
     if((eleccion=="piedra")&&(palabraCPU=="piedra")){
         console.log("empate de piedras");
