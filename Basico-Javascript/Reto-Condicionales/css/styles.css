@@ -3,12 +3,40 @@
     src: url(font/NintendoLabo.ttf) format("truetype");
 }
 
+hr{
+    border: solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
 *{
     box-sizing: border-box;
 }
 
 body{
     background-color: #FFEA00;
+}
+
+.score-title-container{
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.score{
+    border: solid 3px black;
+    height: 200px;
+    width: 350px;
+}
+
+.score h3{
+    font-family: NintendoLabo;
+    font-size: 40px;
+    text-align:center;
+    text-shadow: 2px 2px 1px #DDC40E;
 }
 
 .game-title{
@@ -59,7 +87,49 @@ body{
     text-shadow: 2px 2px 1px #DDC40E;
 }
 
+.resultados{
+    border: solid 10px black;
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.option-resultado{
+    cursor: pointer;
+    height: 325px;
+    width: 208px;
+    background-size: cover;
+}
+
 .texto-resultado{
+    font-family: NintendoLabo;
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    text-shadow: 2px 2px 1px #DDC40E;
+    width: 40%;
+}
+
+#result-player{
+    background-image: url(../img/isometric_rock.png);
+    cursor: pointer;
+    height: 325px;
+    width: 208px;
+    background-size: cover;
+}
+
+#result-cpu{
+    background-image: url(../img/isometric_rock.png);
+    cursor: pointer;
+    height: 325px;
+    width: 208px;
+    background-size: cover;
+}
+
+.option-resultado h3{
     font-family: NintendoLabo;
     font-size: 40px;
     margin-left: auto;

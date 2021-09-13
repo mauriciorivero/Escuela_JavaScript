@@ -1,6 +1,8 @@
 //Reto condicionales 1
 
 var eleccion=" ";
+var pointsPlayer=0;
+var pointsCPU=0;
 
 document.getElementById("rock").onclick = function(){
     eleccion="piedra";
@@ -29,34 +31,57 @@ function ejecutarJuego(eleccion){
     }
 
     if((eleccion=="piedra")&&(palabraCPU=="piedra")){
-        document.getElementById("textResultado").innerHTML="Empate de piedras";
-        console.log("empate de piedras");
+        document.getElementById("result-player").style.backgroundImage="url('img/isometric_rock.png')";
+        document.getElementById("result-cpu").style.backgroundImage="url('img/isometric_rock.png')";
+        pointsPlayer++;
+        pointsCPU++;
+        document.getElementById("counterPlayer").innerHTML = pointsPlayer;
+        document.getElementById("counterCPU").innerHTML = pointsCPU;
     }else if((eleccion=="piedra")&&(palabraCPU=="tijera")){
-        document.getElementById("textResultado").innerHTML="Ganaste! la piedra parte la tijera";
-        console.log("Ganaste! la piedra parte la tijera");
+        document.getElementById("result-player").style.backgroundImage="url('img/isometric_rock.png')";
+        document.getElementById("result-cpu").style.backgroundImage="url('img/isometric_scissors.png')";
+        pointsPlayer++;
+        document.getElementById("counterPlayer").innerHTML = pointsPlayer;
     }else if((eleccion=="piedra")&&(palabraCPU=="papel")){
-        document.getElementById("textResultado").innerHTML="Gana la CPU, el papel envuelve la piedra";
-        console.log("Gana la CPU, el papel envuelve la piedra");
+        document.getElementById("result-player").style.backgroundImage="url('img/isometric_rock.png')";
+        document.getElementById("result-cpu").style.backgroundImage="url('img/isometric_paper.png')";
+        pointsCPU++;
+        document.getElementById("counterCPU").innerHTML = pointsCPU;
     }else if((eleccion=="tijera")&&(palabraCPU=="tijera")){
-        document.getElementById("textResultado").innerHTML="Empate de tijeras!";
-        console.log("Empate de tijeras!");
+        document.getElementById("result-player").style.backgroundImage="url('img/isometric_scissors.png')";
+        document.getElementById("result-cpu").style.backgroundImage="url('img/isometric_scissors.png')";
+        pointsPlayer++;
+        pointsCPU++;
+        document.getElementById("counterPlayer").innerHTML = pointsPlayer;
+        document.getElementById("counterCPU").innerHTML = pointsCPU;
     }else if((eleccion=="tijera")&&(palabraCPU=="papel")){
-        document.getElementById("textResultado").innerHTML="Ganaste! la la tijera rompe el papel";
-        console.log("Ganaste! la la tijera rompe el papel");
+        document.getElementById("result-player").style.backgroundImage="url('img/isometric_scissors.png')";
+        document.getElementById("result-cpu").style.backgroundImage="url('img/isometric_paper.png')";
+        pointsPlayer++;
+        document.getElementById("counterPlayer").innerHTML = pointsPlayer;
     }else if((eleccion=="tijera")&&(palabraCPU=="piedra")){
-        document.getElementById("textResultado").innerHTML="Perdiste! la la tijera se parte ante la piedra";
-        console.log("Perdiste! la la tijera se parte ante la piedra");
+        document.getElementById("result-player").style.backgroundImage="url('img/isometric_scissors.png')";
+        document.getElementById("result-cpu").style.backgroundImage="url('img/isometric_rock.png')";
+        pointsCPU++;
+        document.getElementById("counterCPU").innerHTML = pointsCPU;
     }else if((eleccion=="papel")&&(palabraCPU=="papel")){
-        document.getElementById("textResultado").innerHTML="Empate de papeles";
-        console.log("Empate de papeles");
+        document.getElementById("result-player").style.backgroundImage="url('img/isometric_paper.png')";
+        document.getElementById("result-cpu").style.backgroundImage="url('img/isometric_paper.png')";
+        pointsPlayer++;
+        pointsCPU++;
+        document.getElementById("counterPlayer").innerHTML = pointsPlayer;
+        document.getElementById("counterCPU").innerHTML = pointsCPU;
     }else if((eleccion=="papel")&&(palabraCPU=="piedra")){
-        document.getElementById("textResultado").innerHTML="Ganaste! El papel envuelve la piedra";
-        console.log("Ganaste! El papel envuelve la piedra");
+        document.getElementById("result-player").style.backgroundImage="url('img/isometric_paper.png')";
+        document.getElementById("result-cpu").style.backgroundImage="url('img/isometric_rock.png')";
+        pointsPlayer++;
+        document.getElementById("counterPlayer").innerHTML = pointsPlayer;
     }else if((eleccion=="papel")&&(palabraCPU=="tijera")){
-        document.getElementById("textResultado").innerHTML="Perdiste! El papel se rompe ante la tijera";
-        console.log("Perdiste! El papel se rompe ante la tijera");
+        document.getElementById("result-player").style.backgroundImage="url('img/isometric_paper.png')";
+        document.getElementById("result-cpu").style.backgroundImage="url('img/isometric_scissors.png')";
+        pointsCPU++;
+        document.getElementById("counterCPU").innerHTML = pointsCPU;
     }else{
-        document.getElementById("textResultado").innerHTML="Ganaste! la piedra parte la tijera";
         console.log("No hay juego");
     }
 }
