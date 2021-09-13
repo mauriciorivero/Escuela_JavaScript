@@ -20,3 +20,10 @@ if(edad===37){
     console.log("La edad no es numero");
 }
 
+/*
+El numero cuando tiene un valor mayor o igual que 1 es automaticamente un true
+*/
+var numero = 37;
+if (numero){
+    console.log("Es numero y es verdadero");
+}

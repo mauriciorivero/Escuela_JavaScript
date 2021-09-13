@@ -1,0 +1,70 @@
+@font-face {
+    font-family: NintendoLabo;
+    src: url(font/NintendoLabo.ttf) format("truetype");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FFEA00;
+}
+
+.game-title{
+    font-family: NintendoLabo;
+    font-size: 50px;
+    text-align:center;
+    text-shadow: 2px 2px 1px #DDC40E;
+}
+
+.options{
+    display: flex; 
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.option{
+    cursor: pointer;
+    height: 325px;
+    width: 208px;
+    background-size: cover;
+}
+
+.option:hover{
+    border: solid 5px black;
+    cursor: pointer;
+    height: 325px;
+    width: 208px;
+    background-size: cover;
+}
+
+#rock{
+    background-image: url(../img/isometric_rock.png);
+}
+
+#paper{
+    background-image: url(../img/isometric_paper.png);
+}
+
+#scissors{
+    background-image: url(../img/isometric_scissors.png);
+}
+
+.titulo-resultado{
+    font-family: NintendoLabo;
+    text-align:center;
+    text-shadow: 2px 2px 1px #DDC40E;
+}
+
+.texto-resultado{
+    font-family: NintendoLabo;
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    text-shadow: 2px 2px 1px #DDC40E;
+    width: 40%;
+}
