@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap - CSS Flexbox</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        header{
+            display: flex;
+            justify-content: center;
+            padding: 3rem;
+        }
+        main{
+            align-items: center;
+            border: solid 0.3rem gray;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 3rem;
+            width: 70%;
+        }
+        section{
+            background-color: #474FB5;
+            border-radius: 1rem;
+            display: flex;
+            height: auto;
+            margin-top: 2rem;
+            padding: 3rem;
+            width: 70%;
+        }
+        .section1{
+            flex-wrap: nowrap;
+        }
+        .section2{
+            flex-wrap: wrap;
+        }
+        .section3{
+            flex-wrap: wrap-reverse;
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+            padding: 3rem;
+        }
+        h1{
+            font-family: sans-serif;
+        }
+        h3{
+            font-family: sans-serif;
+        }
+        a{
+            background-color: #F15A24;
+            border-radius: 0.5rem;
+            border-right: 0.5rem solid #EF714B;
+            border-bottom: 0.5rem solid #EF714B;
+            color: white;
+            font-family: sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flex Wrap</h1>
+    </header>
+    <main>
+        <section class="section1">
+            <a href="">E1</a>
+            <a href="">E2</a>
+            <a href="">E3</a>
+            <a href="">E4</a>
+            <a href="">E5</a>
+            <a href="">E6</a>
+            <a href="">E7</a>
+            <a href="">E8</a>
+            <a href="">E9</a>
+            <a href="">E10</a>
+        </section>
+        <section class="section2">
+            <a href="">E1</a>
+            <a href="">E2</a>
+            <a href="">E3</a>
+            <a href="">E4</a>
+            <a href="">E5</a>
+            <a href="">E6</a>
+            <a href="">E7</a>
+            <a href="">E8</a>
+            <a href="">E9</a>
+            <a href="">E10</a>
+        </section>
+        <section class="section3">
+            <a href="">E1</a>
+            <a href="">E2</a>
+            <a href="">E3</a>
+            <a href="">E4</a>
+            <a href="">E5</a>
+            <a href="">E6</a>
+            <a href="">E7</a>
+            <a href="">E8</a>
+            <a href="">E9</a>
+            <a href="">E10</a>
+        </section>
+    </main>
+</body>
+</html>
